@@ -48,7 +48,7 @@ const AddTransaction = (props) => {
         value={transaction.totalAmount}
         onChange={handleInputChange}
       />
-      <button>Add new transaction</button>
+      <button className="button add">Add new transaction</button>
     </form>
   );
 };

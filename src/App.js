@@ -85,10 +85,20 @@ const App = () => {
       <h1>CRUD App</h1>
       <div className="flex-row">
         <div className="flex-large">
+          <h2>View transactions</h2>
+          <TransactionTable
+            transactions={transactions}
+            editRow={editRow}
+            deleteTransaction={deleteTransaction}
+          />
+        </div>
+        <div className="flex-large">
+          {/* <div className={editing ? "flex-large editTransaction" : "flex-large"}> */}
           {editing ? (
             <Fragment>
               <h2>Edit transaction</h2>
               <EditTransaction
+                className="editTransaction"
                 editing={editing}
                 setEditing={setEditing}
                 currentTransaction={currentTransaction}
@@ -98,17 +108,12 @@ const App = () => {
           ) : (
             <Fragment>
               <h2>Add transaction</h2>
-              <AddTransaction addTransaction={addTransaction} />
+              <AddTransaction
+                className="addTransaction"
+                addTransaction={addTransaction}
+              />
             </Fragment>
           )}
-        </div>
-        <div className="flex-large">
-          <h2>View transaction</h2>
-          <TransactionTable
-            transactions={transactions}
-            editRow={editRow}
-            deleteTransaction={deleteTransaction}
-          />
         </div>
       </div>
     </div>

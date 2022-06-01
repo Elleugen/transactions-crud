@@ -25,13 +25,13 @@ const TransactionTable = (props) => {
                     onClick={() => {
                       props.editRow(transaction);
                     }}
-                    className="button muted-button"
+                    className="button edit"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => props.deleteTransaction(transaction.id)}
-                    className="button muted-button"
+                    className="button delete"
                   >
                     Delete
                   </button>

@@ -44,11 +44,8 @@ const EditTransaction = (props) => {
         value={transaction.totalAmount}
         onChange={handleInputChange}
       />
-      <button>Update transaction</button>
-      <button
-        onClick={() => props.setEditing(false)}
-        className="button muted-button"
-      >
+      <button className="button update">Update transaction</button>
+      <button onClick={() => props.setEditing(false)} className="button cancel">
         Cancel
       </button>
     </form>
