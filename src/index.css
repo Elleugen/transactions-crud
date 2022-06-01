@@ -23,6 +23,18 @@ td {
   text-align: left;
   padding: 0.5rem;
 }
+td[colspan="2"] {
+  text-align: center;
+}
+tr:hover {
+  background-color: wheat;
+}
+.tdPointed:hover {
+  cursor: pointer;
+  border: 2px solid chocolate;
+}
+/* .itemPointed {
+} */
 
 /* caption {
   padding: 1rem 0;
@@ -121,17 +133,26 @@ input {
 .add:hover,
 .edit:hover,
 .update:hover {
+  cursor: pointer;
   background-color: seagreen;
   border: 2px solid darkgreen;
   color: white;
 }
 .delete:hover {
+  cursor: pointer;
   background-color: crimson;
   border: 2px solid darkred;
   color: white;
 }
+.back:hover,
 .cancel:hover {
+  cursor: pointer;
   background-color: coral;
   border: 2px solid chocolate;
   color: white;
+}
+.back {
+  border-top-left-radius: 50;
+  border-bottom-left-radius: 50;
+  margin-right: 50px;
 }
